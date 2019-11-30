@@ -18,6 +18,8 @@ Release History
 **Packaging**
 
 * Add back edge builds for pip install
+* Remove Ubuntu cosmic package
+* Add Ubuntu eoan package
 
 **Storage**
 

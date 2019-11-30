@@ -923,8 +923,8 @@ jobs:
    - BuildUbuntuBionic
    - BuildDebianJessie
    - BuildDebianStretch
-   - BuildUbuntuCosmic
    - BuildUbuntuDisco
+   - BuildUbuntuEoan
   condition: and(succeeded(), in(variables['Build.Reason'], 'IndividualCI', 'BatchedCI', 'Manual'))
   pool:
     vmImage: 'ubuntu-16.04'
@@ -962,10 +962,10 @@ jobs:
 
 
   - task: DownloadPipelineArtifact@1
-    displayName: 'Download Ubuntu:Cosmic Builds'
+    displayName: 'Download Ubuntu:Eoan Builds'
     inputs:
       TargetPath: '$(Build.ArtifactStagingDirectory)/debian'
-      artifactName: ubuntu-cosmic
+      artifactName: ubuntu-eoan
 
 
   - task: DownloadPipelineArtifact@1
@@ -1009,8 +1009,8 @@ jobs:
        done
 
        # Distros that do require libssl1.1
-       DISTROS=(bionic cosmic disco buster)
-       BASE_IMAGES=(ubuntu:bionic ubuntu:cosmic ubuntu:disco debian:buster)
+       DISTROS=(bionic eoan disco buster)
+       BASE_IMAGES=(ubuntu:bionic ubuntu:eoan ubuntu:disco debian:buster)
 
        for i in ${!DISTROS[@]}; do
            echo "== Test debian package on ${DISTROS[$i]} =="
@@ -1023,8 +1023,8 @@ jobs:
        done
     displayName: 'Bash Script'
 
-- job: BuildUbuntuCosmic
-  displayName: Build Ubuntu Cosmic
+- job: BuildUbuntuEoan
+  displayName: Build Ubuntu Eoan
 
   dependsOn: BuildPythonWheel
   condition: and(succeeded(), in(variables['Build.Reason'], 'IndividualCI', 'BatchedCI', 'Manual'))
@@ -1044,14 +1044,14 @@ jobs:
       targetType: 'filePath'
       filePath: scripts/release/debian/pipeline.sh
     env:
-      DISTRO: cosmic
-      DISTRO_BASE_IMAGE: ubuntu:cosmic
+      DISTRO: eoan
+      DISTRO_BASE_IMAGE: ubuntu:eoan
 
   - task: PublishPipelineArtifact@0
     displayName: 'Publish Artifact: debian'
     inputs:
       TargetPath: $(Build.ArtifactStagingDirectory)
-      ArtifactName: ubuntu-cosmic
+      ArtifactName: ubuntu-eoan
 
 - job: CheckStyle
   displayName: "Check CLI Style"
