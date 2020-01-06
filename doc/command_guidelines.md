@@ -28,7 +28,7 @@ If in doubt, ask!
 - Support tab completion for parameter names and values (e.g. resource names)
 - Commands must support all output types (json, tsv, table)
 - Provide custom table outputs for commands that don't provide table output automatically
-- Commands must return an object, dictionary or `None` (do not string, Boolean, etc. types)
+- Commands must return an object, dictionary or `None` (do not return string, Boolean, etc. types)
 - Command output must go to `stdout`, everything else to `stderr` (log/status/errors).
 - Log to `logger.error()` or `logger.warning()` for user messages; do not use the `print()` function
 - Use the appropriate logging level for printing strings. e.g. `logging.info(“Upload of myfile.txt successful”)` NOT `return “Upload successful”`.
@@ -107,7 +107,7 @@ If in doubt, ask!
 
 **PREFERRED**
 ```
-    --parameters   Local path or URL to a parameters file.`
+    --parameters   Local path or URL to a parameters file.
 ```
 
 ## Standard Command Types
