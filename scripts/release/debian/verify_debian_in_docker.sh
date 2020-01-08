@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
-# This script should be run in a docker to verify installing package from the apt repository
+# This script should be run in a docker to verify installing deb package from the apt repository.
+
 apt update -y
 apt install curl -y
 curl -sL https://aka.ms/InstallAzureCLIDeb | bash 
