@@ -43,7 +43,7 @@ def generate_issue_report():
             created_at = issue['created_at']
             created_date = datetime.datetime.strptime(created_at, datetime_fromat)
             target_date = created_date + datetime.timedelta(days=days_before)
-            f.write(f'"{title}","{assignees}","{target_date.strftime(date_format)}","{created_date.strftime(date_format)}","{html_url}"\n')
+            f.write(f'"{title}","{assignees}","{target_date.strftime(date_format)}","{created_date.strftime(date_format)}",=HYPERLINK("{html_url}")\n')
     print(f"Report generated in {file_name}")
 
 def open_github_my_issues():
