@@ -28,5 +28,3 @@ do
 done
 echo "Timeout!"
 exit 1
-
-
