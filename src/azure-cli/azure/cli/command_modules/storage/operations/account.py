@@ -411,12 +411,11 @@ def reject_private_endpoint_connection(cmd, client, resource_group_name, account
     )
 
 
-def create_management_policies(client, resource_group_name, account_name, policy=None):
-    if policy:
-        if os.path.exists(policy):
-            policy = get_file_json(policy)
-        else:
-            policy = shell_safe_json_parse(policy)
+def create_management_policies(client, resource_group_name, account_name, policy):
+    if os.path.exists(policy):
+        policy = get_file_json(policy)
+    else:
+        policy = shell_safe_json_parse(policy)
     return client.create_or_update(resource_group_name, account_name, policy=policy)
 
 
@@ -428,7 +427,8 @@ def update_management_policies(client, resource_group_name, account_name, parame
 
 # TODO: support updating other properties besides 'enable_change_feed,delete_retention_policy'
 def update_blob_service_properties(cmd, instance, enable_change_feed=None, enable_delete_retention=None,
-                                   delete_retention_days=None, enable_restore_policy=None, restore_days=None):
+                                   delete_retention_days=None, enable_restore_policy=None, restore_days=None,
+                                   enable_versioning=None):
     if enable_change_feed is not None:
         instance.change_feed = cmd.get_models('ChangeFeed')(enabled=enable_change_feed)
 
@@ -442,4 +442,6 @@ def update_blob_service_properties(cmd, instance, enable_change_feed=None, enabl
             restore_days = None
         instance.restore_policy = cmd.get_models('RestorePolicyProperties')(
             enabled=enable_restore_policy, days=restore_days)
+    if enable_versioning is not None:
+        instance.is_versioning_enabled = enable_versioning
     return instance
