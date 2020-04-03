@@ -109,11 +109,8 @@ def configure_common_settings_track2(cli_ctx):
     client_kwargs.update(_debug.change_ssl_cert_verification_track2())
 
     client_kwargs['logging_enable'] = True
-    client_kwargs['user_agent'] = UA_AGENT
-    try:
-        client_kwargs['user_agent'] += os.environ[ENV_ADDITIONAL_USER_AGENT]
-    except KeyError:
-        pass
+    client_kwargs['user_agent'] = get_az_user_agent()
+
 
     try:
         command_ext_name = cli_ctx.data['command_extension_name']
