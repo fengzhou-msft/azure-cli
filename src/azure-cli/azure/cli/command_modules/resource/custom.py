@@ -2299,6 +2299,7 @@ def show_version(cmd):
 def upgrade_version(cmd):
     from azure.cli.core._environment import _ENV_AZ_INSTALLER
     import subprocess
+    # TODO check whether it's already the latest version
     try:
         installer = os.getenv(_ENV_AZ_INSTALLER)
         if installer == 'DEB':
@@ -2312,7 +2313,9 @@ def upgrade_version(cmd):
         elif installer == 'DOCKER':
             logger.warning('Exit the container to pull latest image with docker pull mcr.microsoft.com/azure-cli or pip install --upgrade azure-cli in this container')
         elif installer == 'MSI':
-            logger.warning('Update with the latest MSI https://aka.ms/installazurecliwindows')
+            # TODO put the script in a storage account, download it and store in a tmp dir
+            subprocess.call('powershell.exe "C:\\upgrade.ps1"', shell=True)
+            # logger.warning('Update with the latest MSI https://aka.ms/installazurecliwindows')
         else:
             logger.warning('Not able to upgrade automatically. Instructions can be found at https://docs.microsoft.com/en-us/cli/azure/install-azure-cli')
     except Exception:  # pylint: disable=broad-except
