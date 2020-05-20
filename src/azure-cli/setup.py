@@ -57,7 +57,7 @@ DEPENDENCIES = [
     'azure-cli-nspkg~=3.0,>=3.0.3',
     'azure-cosmos~=3.0,>=3.0.2',
     # 'azure-datalake-store~=0.0.48',
-    # 'azure-functions-devops-build~=0.0.22',
+    'azure-functions-devops-build~=0.0.22',
     'azure-graphrbac~=0.60.0',
     'azure-keyvault~=1.1',
     # 'azure-mgmt-advisor>=2.0.1,<3.0.0',
