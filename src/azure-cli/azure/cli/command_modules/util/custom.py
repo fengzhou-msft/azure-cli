@@ -40,14 +40,17 @@ def _get_daemon():
 
 def start_daemon(cmd):
     d = _get_daemon()
+    logger.warning("Start Daemon.")
     d.start()
 
 
 def stop_daemon(cmd):
     d = _get_daemon()
     d.stop()
+    logger.warning("Daemon stopped!")
 
 
 def restart_daemon(cmd):
     d = _get_daemon()
+    logger.warning("Restart Daemon.")
     d.restart()

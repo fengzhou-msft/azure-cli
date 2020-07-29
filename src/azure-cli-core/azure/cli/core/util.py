@@ -215,7 +215,9 @@ def get_az_version_string(use_cache=False):  # pylint: disable=too-many-statemen
     versions = _get_local_versions()
 
     # get the versions from pypi
-    versions, success = get_cached_latest_versions(versions) if use_cache else _update_latest_from_pypi(versions)
+    # versions, success = get_cached_latest_versions(versions) if use_cache else _update_latest_from_pypi(versions)
+    
+    versions, success = get_cached_latest_versions(versions)
     updates_available = 0
 
     def _print(val=''):
