@@ -27,3 +27,27 @@ def show_version(cmd):  # pylint: disable=unused-argument
     from azure.cli.core.util import get_az_version_json
     versions = get_az_version_json()
     return versions
+
+
+def _get_daemon():
+    import os
+    from azure.cli.core.api import get_config_dir
+    from azure.cli.command_modules.util.azdaemon import AzDaemon
+    pidfile = os.path.join(get_config_dir(), "azdaemon.pid")
+    print(pidfile)
+    return AzDaemon(pidfile=pidfile)
+
+
+def start_daemon(cmd):
+    d = _get_daemon()
+    d.start()
+
+
+def stop_daemon(cmd):
+    d = _get_daemon()
+    d.stop()
+
+
+def restart_daemon(cmd):
+    d = _get_daemon()
+    d.restart()

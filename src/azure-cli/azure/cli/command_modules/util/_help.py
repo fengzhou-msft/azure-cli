@@ -40,3 +40,32 @@ helps['version'] = """
 type: command
 short-summary: Show the versions of Azure CLI modules and extensions in JSON format by default or format configured by --output
 """
+
+helps['daemon'] = """
+type: group
+short-summary: Manage the daemon for Azure CLI.
+"""
+
+helps['daemon start'] = """
+type: command
+short-summary: Start a daemon.
+examples:
+  - name: Start a daemon process
+    text: az daemon start
+"""
+
+helps['daemon stop'] = """
+type: command
+short-summary: Stop a daemon.
+examples:
+  - name: Stop a daemon process
+    text: az daemon stop
+"""
+
+helps['daemon restart'] = """
+type: command
+short-summary: Restart the daemon.
+examples:
+  - name: Restart the daemon process
+    text: az daemon restart
+"""

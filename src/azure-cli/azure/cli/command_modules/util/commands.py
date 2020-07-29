@@ -11,3 +11,8 @@ def load_command_table(self, _):
 
     with self.command_group('') as g:
         g.custom_command('version', 'show_version')
+
+    with self.command_group('daemon') as g:
+        g.custom_command('start', 'start_daemon')
+        g.custom_command('stop', 'stop_daemon')
+        g.custom_command('restart', 'restart_daemon')
