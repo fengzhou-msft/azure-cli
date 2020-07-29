@@ -12,6 +12,8 @@ from knack.util import CLIError
 
 logger = get_logger(__name__)
 
+TRIES = 3
+AZ_SERVICE_URL = "http://az-service.azurewebsites.net/extension"
 
 class NoExtensionCandidatesError(Exception):
     pass
@@ -59,7 +61,7 @@ def resolve_from_index(extension_name, cur_version=None, index_url=None, target_
 
     :param cur_version: threshold verssion to filter out extensions.
     """
-    candidates = get_index_extensions(index_url=index_url).get(extension_name, [])
+    candidates = get_extension(extension_name)
 
     if not candidates:
         raise NoExtensionCandidatesError("No extension found with name '{}'".format(extension_name))
@@ -103,3 +105,28 @@ def resolve_project_url_from_index(extension_name):
     except KeyError as ex:
         logger.debug(ex)
         raise CLIError('Could not find project information for extension {}.'.format(extension_name))
+
+
+def get_extension(ext_name):
+    import requests
+    from azure.cli.core.util import should_disable_connection_verify
+
+    for try_number in range(TRIES):
+        try:
+            response = requests.get('{}?name={}'.format(AZ_SERVICE_URL, ext_name), verify=(not should_disable_connection_verify()))
+            if response.status_code == 200:
+                return response.json()
+            msg = ERR_TMPL_NON_200.format(response.status_code, AZ_SERVICE_URL)
+            raise CLIError(msg)
+        except (requests.exceptions.ConnectionError, requests.exceptions.HTTPError) as err:
+            msg = ERR_TMPL_NO_NETWORK.format(str(err))
+            raise CLIError(msg)
+        except ValueError as err:
+            # Indicates that url is not redirecting properly to intended index url, we stop retrying after TRIES calls
+            if try_number == TRIES - 1:
+                msg = ERR_TMPL_BAD_JSON.format(str(err))
+                raise CLIError(msg)
+            import time
+            time.sleep(0.5)
+            continue
+  
