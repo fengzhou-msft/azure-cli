@@ -16,3 +16,6 @@ def load_command_table(self, _):
         g.custom_command('start', 'start_daemon')
         g.custom_command('stop', 'stop_daemon')
         g.custom_command('restart', 'restart_daemon')
+
+    with self.command_group('') as g:
+        g.custom_command('upgrade', 'upgrade_version', is_experimental=True)

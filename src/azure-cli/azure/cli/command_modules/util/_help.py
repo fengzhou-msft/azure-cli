@@ -69,3 +69,8 @@ examples:
   - name: Restart the daemon process
     text: az daemon restart
 """
+
+helps['upgrade'] = """
+type: command
+short-summary: Upgrade to the latest Azure CLI version
+"""
