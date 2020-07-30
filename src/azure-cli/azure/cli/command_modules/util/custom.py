@@ -56,18 +56,28 @@ def restart_daemon(cmd):
     d.restart()
 
 
-def upgrade_version(cmd):
-    from azure.cli.core._environment import _ENV_AZ_INSTALLER
+def upgrade_version(cmd=None):
     import subprocess
-    # TODO check whether it's already the latest version
+    from azure.cli.core._environment import _ENV_AZ_INSTALLER
+    from azure.cli.core.util import get_cached_latest_versions
+    versions, success = get_cached_latest_versions()
+    from distutils.version import LooseVersion  # pylint: disable=import-error,no-name-in-module
+    version_dict = versions['azure-cli']
+    local = version_dict['local']
+    pypi = version_dict.get('pypi', None)
+    if pypi and LooseVersion(pypi) <= LooseVersion(local):
+        logger.warning("You already have the latest version: %s", local)
+        return
     try:
+        import os
         installer = os.getenv(_ENV_AZ_INSTALLER)
         if installer == 'DEB':
             subprocess.call('sudo apt-get update && sudo apt-get install --only-upgrade -y azure-cli', shell=True)
         elif installer == 'RPM':
             subprocess.call('sudo yum update -y azure-cli', shell=True)
         elif installer == 'HOMEBREW':
-            subprocess.call('brew update && brew upgrade -y azure-cli', shell=True)
+            logger.warning('Updating Azure CLI with: brew update && brew upgrade azure-cli')
+            subprocess.call('brew update && brew upgrade azure-cli', shell=True)
         elif installer == 'PIP':
             subprocess.call('pip install --upgrade azure-cli', shell=True)
         elif installer == 'DOCKER':
@@ -78,5 +88,6 @@ def upgrade_version(cmd):
             # logger.warning('Update with the latest MSI https://aka.ms/installazurecliwindows')
         else:
             logger.warning('Not able to upgrade automatically. Instructions can be found at https://docs.microsoft.com/en-us/cli/azure/install-azure-cli')
-    except Exception:  # pylint: disable=broad-except
+    except Exception as ex:  # pylint: disable=broad-except
+        logger.error(str(ex))
         pass
