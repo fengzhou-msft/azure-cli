@@ -5,16 +5,14 @@ class AzDaemon(run.RunDaemon):
 
     def run(self):
         while True:
-            print("I am a daemon...")
             self.update_ext_cmd_index()
             self.update_latest_version()
-            time.sleep(5)
+            time.sleep(60)
     
     def update_ext_cmd_index(self):
-        print('Update extension command index.')
+        pass
 
     def update_latest_version(self):
-        print('===Update latest version===')
         import os
         import datetime
         from azure.cli.core._environment import get_config_dir
@@ -26,6 +24,5 @@ class AzDaemon(run.RunDaemon):
         VERSIONS.load(os.path.join(get_config_dir(), 'versionCheck.json'))
         versions, success = _update_latest_from_pypi(versions)
         if success:
-            print(versions)
             VERSIONS['versions'] = versions
             VERSIONS[_VERSION_UPDATE_TIME] = str(datetime.datetime.now())
