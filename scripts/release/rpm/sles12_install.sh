@@ -11,7 +11,7 @@ PYTHON_SRC_DIR=$(mktemp -d)
 wget -qO- https://www.python.org/ftp/python/$PYTHON_VERSION/Python-$PYTHON_VERSION.tgz | tar -xz -C "$PYTHON_SRC_DIR"
 # Build Python
 # Please be aware that with --prefix=/usr, the command will override the existing python3 version
-$PYTHON_SRC_DIR/*/configure --with-ssl --prefix=/usr
+$PYTHON_SRC_DIR/*/configure --prefix=/usr
 make
 make install
 # Download azure-cli package 
