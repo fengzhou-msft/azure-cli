@@ -1,0 +1,1820 @@
+interactions:
+- request:
+    body: '{"location": "eastus", "sku": {"name": "Standard"}}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - appconfig create
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '51'
+      Content-Type:
+      - application/json; charset=utf-8
+      ParameterSetName:
+      - -n -g -l --sku
+      User-Agent:
+      - python/3.6.6 (Windows-10-10.0.19041-SP0) msrest/0.6.18 msrest_azure/0.6.3
+        azure-mgmt-appconfiguration/0.6.0 Azure-SDK-For-Python AZURECLI/2.14.0 (MSI)
+      accept-language:
+      - en-US
+    method: PUT
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.AppConfiguration/configurationStores/AadTest000002?api-version=2020-06-01
+  response:
+    body:
+      string: '{"type":"Microsoft.AppConfiguration/configurationStores","properties":{"provisioningState":"Creating","creationDate":"2020-11-12T14:33:43.8948774+00:00","endpoint":null,"encryption":null,"privateEndpointConnections":null},"sku":{"name":"Standard"},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.AppConfiguration/configurationStores/AadTest000002","name":"AadTest000002","location":"eastus","tags":{}}'
+    headers:
+      azure-asyncoperation:
+      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.AppConfiguration/locations/eastus/operationsStatus/20cdfd00-f646-d71e-1867-77d19acc1a5a?api-version=2020-06-01
+      cache-control:
+      - no-cache
+      content-length:
+      - '526'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Thu, 12 Nov 2020 14:33:44 GMT
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
+      server:
+      - nginx/1.17.10
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-content-type-options:
+      - nosniff
+      x-ms-ratelimit-remaining-subscription-writes:
+      - '1199'
+    status:
+      code: 201
+      message: Created
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - appconfig create
+      Connection:
+      - keep-alive
+      ParameterSetName:
+      - -n -g -l --sku
+      User-Agent:
+      - python/3.6.6 (Windows-10-10.0.19041-SP0) msrest/0.6.18 msrest_azure/0.6.3
+        azure-mgmt-appconfiguration/0.6.0 Azure-SDK-For-Python AZURECLI/2.14.0 (MSI)
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.AppConfiguration/locations/eastus/operationsStatus/20cdfd00-f646-d71e-1867-77d19acc1a5a?api-version=2020-06-01
+  response:
+    body:
+      string: '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.AppConfiguration/locations/eastus/operationsStatus/20cdfd00-f646-d71e-1867-77d19acc1a5a","name":"20cdfd00-f646-d71e-1867-77d19acc1a5a","status":"Succeeded","error":null}'
+    headers:
+      azure-asyncoperation:
+      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.AppConfiguration/locations/eastus/operationsStatus/20cdfd00-f646-d71e-1867-77d19acc1a5a?api-version=2020-06-01
+      cache-control:
+      - no-cache
+      content-length:
+      - '248'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Thu, 12 Nov 2020 14:33:55 GMT
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
+      server:
+      - nginx/1.17.10
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - appconfig create
+      Connection:
+      - keep-alive
+      ParameterSetName:
+      - -n -g -l --sku
+      User-Agent:
+      - python/3.6.6 (Windows-10-10.0.19041-SP0) msrest/0.6.18 msrest_azure/0.6.3
+        azure-mgmt-appconfiguration/0.6.0 Azure-SDK-For-Python AZURECLI/2.14.0 (MSI)
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.AppConfiguration/configurationStores/AadTest000002?api-version=2020-06-01
+  response:
+    body:
+      string: '{"type":"Microsoft.AppConfiguration/configurationStores","properties":{"provisioningState":"Succeeded","creationDate":"2020-11-12T14:33:50+00:00","endpoint":"https://aadtestavg5ukcz.azconfig.io","encryption":{"keyVaultProperties":null},"privateEndpointConnections":null},"sku":{"name":"standard"},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.AppConfiguration/configurationStores/aadtestavg5ukcz","name":"AadTest000002","location":"eastus","tags":{}}'
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '575'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Thu, 12 Nov 2020 14:33:56 GMT
+      etag:
+      - W/"b602582d-0000-0100-0000-5fad47cd0000"
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
+      server:
+      - nginx/1.17.10
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding,Accept-Encoding
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - appconfig credential list
+      Connection:
+      - keep-alive
+      ParameterSetName:
+      - -n -g
+      User-Agent:
+      - python/3.6.6 (Windows-10-10.0.19041-SP0) msrest/0.6.18 msrest_azure/0.6.3
+        azure-mgmt-appconfiguration/0.6.0 Azure-SDK-For-Python AZURECLI/2.14.0 (MSI)
+      accept-language:
+      - en-US
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.AppConfiguration/configurationStores?api-version=2020-06-01
+  response:
+    body:
+      string: '{"value":[{"type":"Microsoft.AppConfiguration/configurationStores","properties":{"provisioningState":"Succeeded","creationDate":"2020-11-12T14:33:50+00:00","endpoint":"https://aadtestavg5ukcz.azconfig.io","encryption":{"keyVaultProperties":null},"privateEndpointConnections":null},"sku":{"name":"standard"},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.AppConfiguration/configurationStores/aadtestavg5ukcz","name":"AadTest000002","location":"eastus","tags":{}}],"nextLink":"https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.AppConfiguration/configurationStores?api-version=2020-06-01&$skipToken=aadtestavg5ukcz"}'
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '787'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Thu, 12 Nov 2020 14:33:57 GMT
+      expires:
+      - '-1'
+      link:
+      - </subscriptions/0b1f6471-1bf0-4dda-aec3-cb9272f09590/providers/Microsoft.AppConfiguration/configurationStores?api-version=2020-06-01&$skipToken=aadtestavg5ukcz>;
+        rel="next"
+      pragma:
+      - no-cache
+      server:
+      - nginx/1.17.10
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding,Accept-Encoding
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - appconfig credential list
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '0'
+      ParameterSetName:
+      - -n -g
+      User-Agent:
+      - python/3.6.6 (Windows-10-10.0.19041-SP0) msrest/0.6.18 msrest_azure/0.6.3
+        azure-mgmt-appconfiguration/0.6.0 Azure-SDK-For-Python AZURECLI/2.14.0 (MSI)
+      accept-language:
+      - en-US
+    method: POST
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.AppConfiguration/configurationStores/AadTest000002/ListKeys?api-version=2020-06-01
+  response:
+    body:
+      string: '{"value":[{"id":"VuxC-l0-s0:y60JXPYgIffcpgy6Iv0f","name":"Primary","value":"6l3dhn/I1I+qy9ZDYChCKh7j+Hp7GGH0RzZ2zWAcLtc=","connectionString":"Endpoint=https://aadtestavg5ukcz.azconfig.io;Id=VuxC-l0-s0:y60JXPYgIffcpgy6Iv0f;Secret=6l3dhn/I1I+qy9ZDYChCKh7j+Hp7GGH0RzZ2zWAcLtc=","lastModified":"2020-11-12T14:33:43+00:00","readOnly":false},{"id":"azgP-l0-s0:blAuuvYziBx5K/FjXiCK","name":"Secondary","value":"dSHNbbqgJBMMbSF008/Hwv/LGDWXRQmEb396O5qgW9s=","connectionString":"Endpoint=https://aadtestavg5ukcz.azconfig.io;Id=azgP-l0-s0:blAuuvYziBx5K/FjXiCK;Secret=dSHNbbqgJBMMbSF008/Hwv/LGDWXRQmEb396O5qgW9s=","lastModified":"2020-11-12T14:33:43+00:00","readOnly":false},{"id":"x2n3-l0-s0:LTZOixzLhCoas2BQ/QUg","name":"Primary
+        Read Only","value":"kTbI2/NW+Ahv5H+PR7do39Yf/MOezZatxbWbCo7t0zs=","connectionString":"Endpoint=https://aadtestavg5ukcz.azconfig.io;Id=x2n3-l0-s0:LTZOixzLhCoas2BQ/QUg;Secret=kTbI2/NW+Ahv5H+PR7do39Yf/MOezZatxbWbCo7t0zs=","lastModified":"2020-11-12T14:33:43+00:00","readOnly":true},{"id":"unTe-l0-s0:TYAzdZ8DVUO0yMQcleBj","name":"Secondary
+        Read Only","value":"IKP8PeLIYWhRfAtFNqalnNB2scxtjyTcrR+nePLT5i8=","connectionString":"Endpoint=https://aadtestavg5ukcz.azconfig.io;Id=unTe-l0-s0:TYAzdZ8DVUO0yMQcleBj;Secret=IKP8PeLIYWhRfAtFNqalnNB2scxtjyTcrR+nePLT5i8=","lastModified":"2020-11-12T14:33:43+00:00","readOnly":true}],"nextLink":null}'
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '1353'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Thu, 12 Nov 2020 14:33:58 GMT
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
+      server:
+      - nginx/1.17.10
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding,Accept-Encoding
+      x-content-type-options:
+      - nosniff
+      x-ms-ratelimit-remaining-subscription-writes:
+      - '1199'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/vnd.microsoft.appconfig.kv+json
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - AZURECLI.APPCONFIG/2.14.0 azsdk-python-appconfiguration/1.1.1 Python/3.6.6
+        (Windows-10-10.0.19041-SP0)
+      x-ms-content-sha256:
+      - 47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
+      x-ms-date:
+      - Nov, 12 2020 14:33:59 GMT
+    method: GET
+    uri: https://aadtestavg5ukcz.azconfig.io/kv/Color?api-version=1.0
+  response:
+    body:
+      string: ''
+    headers:
+      access-control-allow-credentials:
+      - 'true'
+      access-control-allow-origin:
+      - '*'
+      access-control-expose-headers:
+      - DNT, X-CustomHeader, Keep-Alive, User-Agent, X-Requested-With, If-Modified-Since,
+        Cache-Control, Content-Type, Authorization, x-ms-client-request-id, x-ms-useragent,
+        x-ms-content-sha256, x-ms-date, host, Accept, Accept-Datetime, Date, If-Match,
+        If-None-Match, Sync-Token, x-ms-return-client-request-id, ETag, Last-Modified,
+        Link, Memento-Datetime, retry-after-ms, x-ms-request-id, WWW-Authenticate
+      connection:
+      - keep-alive
+      content-length:
+      - '0'
+      date:
+      - Thu, 12 Nov 2020 14:34:00 GMT
+      server:
+      - openresty/1.17.8.2
+      strict-transport-security:
+      - max-age=15724800; includeSubDomains
+      x-ms-tenant-name:
+      - aadtestavg5ukcz
+    status:
+      code: 404
+      message: Not Found
+- request:
+    body: '{"key": "Color", "value": "Red"}'
+    headers:
+      Accept:
+      - application/vnd.microsoft.appconfig.kv+json
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '32'
+      Content-Type:
+      - application/json; charset=utf-8
+      If-None-Match:
+      - '*'
+      User-Agent:
+      - AZURECLI.APPCONFIG/2.14.0 azsdk-python-appconfiguration/1.1.1 Python/3.6.6
+        (Windows-10-10.0.19041-SP0)
+      x-ms-content-sha256:
+      - 93pU0jGCdw8QpLcz/Qn0Ull5LSCpQ1xGf+ME0csEHuE=
+      x-ms-date:
+      - Nov, 12 2020 14:34:00 GMT
+    method: PUT
+    uri: https://aadtestavg5ukcz.azconfig.io/kv/Color?api-version=1.0
+  response:
+    body:
+      string: '{"etag":"EgVWvunfjl5RGlMitL16hP8tFu7","key":"Color","label":null,"content_type":null,"value":"Red","tags":{},"locked":false,"last_modified":"2020-11-12T14:34:01+00:00"}'
+    headers:
+      access-control-allow-credentials:
+      - 'true'
+      access-control-allow-origin:
+      - '*'
+      access-control-expose-headers:
+      - DNT, X-CustomHeader, Keep-Alive, User-Agent, X-Requested-With, If-Modified-Since,
+        Cache-Control, Content-Type, Authorization, x-ms-client-request-id, x-ms-useragent,
+        x-ms-content-sha256, x-ms-date, host, Accept, Accept-Datetime, Date, If-Match,
+        If-None-Match, Sync-Token, x-ms-return-client-request-id, ETag, Last-Modified,
+        Link, Memento-Datetime, retry-after-ms, x-ms-request-id, WWW-Authenticate
+      connection:
+      - keep-alive
+      content-type:
+      - application/vnd.microsoft.appconfig.kv+json; charset=utf-8
+      date:
+      - Thu, 12 Nov 2020 14:34:01 GMT
+      etag:
+      - '"EgVWvunfjl5RGlMitL16hP8tFu7"'
+      last-modified:
+      - Thu, 12 Nov 2020 14:34:01 GMT
+      server:
+      - openresty/1.17.8.2
+      strict-transport-security:
+      - max-age=15724800; includeSubDomains
+      sync-token:
+      - zAJw6V16=NDo1IzI5NjI5NDY=;sn=2962946
+      transfer-encoding:
+      - chunked
+      x-ms-tenant-name:
+      - aadtestavg5ukcz
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/vnd.microsoft.appconfig.kv+json
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - AZURECLI.APPCONFIG/2.14.0 azsdk-python-appconfiguration/1.1.1 Python/3.6.6
+        (Windows-10-10.0.19041-SP0)
+      x-ms-content-sha256:
+      - 47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=
+      x-ms-date:
+      - Nov, 12 2020 14:34:00 GMT
+    method: GET
+    uri: https://aadtestavg5ukcz.azconfig.io/kv/.appconfig.featureflag%2FBeta?api-version=1.0
+  response:
+    body:
+      string: ''
+    headers:
+      access-control-allow-credentials:
+      - 'true'
+      access-control-allow-origin:
+      - '*'
+      access-control-expose-headers:
+      - DNT, X-CustomHeader, Keep-Alive, User-Agent, X-Requested-With, If-Modified-Since,
+        Cache-Control, Content-Type, Authorization, x-ms-client-request-id, x-ms-useragent,
+        x-ms-content-sha256, x-ms-date, host, Accept, Accept-Datetime, Date, If-Match,
+        If-None-Match, Sync-Token, x-ms-return-client-request-id, ETag, Last-Modified,
+        Link, Memento-Datetime, retry-after-ms, x-ms-request-id, WWW-Authenticate
+      connection:
+      - keep-alive
+      content-length:
+      - '0'
+      date:
+      - Thu, 12 Nov 2020 14:34:02 GMT
+      server:
+      - openresty/1.17.8.2
+      strict-transport-security:
+      - max-age=15724800; includeSubDomains
+      x-ms-tenant-name:
+      - aadtestavg5ukcz
+    status:
+      code: 404
+      message: Not Found
+- request:
+    body: '{"key": ".appconfig.featureflag/Beta", "content_type": "application/vnd.microsoft.appconfig.ff+json;charset=utf-8",
+      "value": "{\"id\": \"Beta\", \"description\": null, \"enabled\": false, \"conditions\":
+      {\"client_filters\": []}}", "tags": {}}'
+    headers:
+      Accept:
+      - application/vnd.microsoft.appconfig.kv+json
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '243'
+      Content-Type:
+      - application/json; charset=utf-8
+      If-None-Match:
+      - '*'
+      User-Agent:
+      - AZURECLI.APPCONFIG/2.14.0 azsdk-python-appconfiguration/1.1.1 Python/3.6.6
+        (Windows-10-10.0.19041-SP0)
+      x-ms-content-sha256:
+      - d1lyg6a+9mnBVyP0ORwLzt/rsyGm0ESqcmS4R9loiVI=
+      x-ms-date:
+      - Nov, 12 2020 14:34:02 GMT
+    method: PUT
+    uri: https://aadtestavg5ukcz.azconfig.io/kv/.appconfig.featureflag%2FBeta?api-version=1.0
+  response:
+    body:
+      string: '{"etag":"RsS7CflTnsGWEfNd5hAwQWqhj0A","key":".appconfig.featureflag/Beta","label":null,"content_type":"application/vnd.microsoft.appconfig.ff+json;charset=utf-8","value":"{\"id\":
+        \"Beta\", \"description\": null, \"enabled\": false, \"conditions\": {\"client_filters\":
+        []}}","tags":{},"locked":false,"last_modified":"2020-11-12T14:34:03+00:00"}'
+    headers:
+      access-control-allow-credentials:
+      - 'true'
+      access-control-allow-origin:
+      - '*'
+      access-control-expose-headers:
+      - DNT, X-CustomHeader, Keep-Alive, User-Agent, X-Requested-With, If-Modified-Since,
+        Cache-Control, Content-Type, Authorization, x-ms-client-request-id, x-ms-useragent,
+        x-ms-content-sha256, x-ms-date, host, Accept, Accept-Datetime, Date, If-Match,
+        If-None-Match, Sync-Token, x-ms-return-client-request-id, ETag, Last-Modified,
+        Link, Memento-Datetime, retry-after-ms, x-ms-request-id, WWW-Authenticate
+      connection:
+      - keep-alive
+      content-type:
+      - application/vnd.microsoft.appconfig.kv+json; charset=utf-8
+      date:
+      - Thu, 12 Nov 2020 14:34:02 GMT
+      etag:
+      - '"RsS7CflTnsGWEfNd5hAwQWqhj0A"'
+      last-modified:
+      - Thu, 12 Nov 2020 14:34:03 GMT
+      server:
+      - openresty/1.17.8.2
+      strict-transport-security:
+      - max-age=15724800; includeSubDomains
+      sync-token:
+      - zAJw6V16=NDo1IzI5NjI5NDc=;sn=2962947
+      transfer-encoding:
+      - chunked
+      x-ms-tenant-name:
+      - aadtestavg5ukcz
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - appconfig show
+      Connection:
+      - keep-alive
+      ParameterSetName:
+      - -n -g
+      User-Agent:
+      - python/3.6.6 (Windows-10-10.0.19041-SP0) msrest/0.6.18 msrest_azure/0.6.3
+        azure-mgmt-appconfiguration/0.6.0 Azure-SDK-For-Python AZURECLI/2.14.0 (MSI)
+      accept-language:
+      - en-US
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.AppConfiguration/configurationStores/AadTest000002?api-version=2020-06-01
+  response:
+    body:
+      string: '{"type":"Microsoft.AppConfiguration/configurationStores","properties":{"provisioningState":"Succeeded","creationDate":"2020-11-12T14:33:50+00:00","endpoint":"https://aadtestavg5ukcz.azconfig.io","encryption":{"keyVaultProperties":null},"privateEndpointConnections":null},"sku":{"name":"standard"},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.AppConfiguration/configurationStores/aadtestavg5ukcz","name":"AadTest000002","location":"eastus","tags":{}}'
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '575'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Thu, 12 Nov 2020 14:34:03 GMT
+      etag:
+      - W/"b602582d-0000-0100-0000-5fad47cd0000"
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
+      server:
+      - nginx/1.17.10
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding,Accept-Encoding
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/vnd.microsoft.appconfig.kv+json
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - AZURECLI.APPCONFIG/2.14.0 azsdk-python-appconfiguration/1.1.1 Python/3.6.6
+        (Windows-10-10.0.19041-SP0)
+    method: GET
+    uri: https://aadtestavg5ukcz.azconfig.io/kv/Color?api-version=1.0
+  response:
+    body:
+      string: ''
+    headers:
+      access-control-allow-credentials:
+      - 'true'
+      access-control-allow-origin:
+      - '*'
+      access-control-expose-headers:
+      - DNT, X-CustomHeader, Keep-Alive, User-Agent, X-Requested-With, If-Modified-Since,
+        Cache-Control, Content-Type, Authorization, x-ms-client-request-id, x-ms-useragent,
+        x-ms-content-sha256, x-ms-date, host, Accept, Accept-Datetime, Date, If-Match,
+        If-None-Match, Sync-Token, x-ms-return-client-request-id, ETag, Last-Modified,
+        Link, Memento-Datetime, retry-after-ms, x-ms-request-id, WWW-Authenticate
+      connection:
+      - keep-alive
+      content-length:
+      - '0'
+      date:
+      - Thu, 12 Nov 2020 14:34:06 GMT
+      server:
+      - openresty/1.17.8.2
+      strict-transport-security:
+      - max-age=15724800; includeSubDomains
+      x-ms-tenant-name:
+      - aadtestavg5ukcz
+    status:
+      code: 403
+      message: Forbidden
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - role assignment create
+      Connection:
+      - keep-alive
+      ParameterSetName:
+      - --assignee --role --scope
+      User-Agent:
+      - python/3.6.6 (Windows-10-10.0.19041-SP0) msrest/0.6.18 msrest_azure/0.6.3
+        azure-mgmt-authorization/0.61.0 Azure-SDK-For-Python AZURECLI/2.14.0 (MSI)
+      accept-language:
+      - en-US
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.AppConfiguration/configurationStores/aadtestavg5ukcz/providers/Microsoft.Authorization/roleDefinitions?$filter=roleName%20eq%20%27App%20Configuration%20Data%20Reader%27&api-version=2018-01-01-preview
+  response:
+    body:
+      string: '{"value":[{"properties":{"roleName":"App Configuration Data Reader","type":"BuiltInRole","description":"Allows
+        read access to App Configuration data.","assignableScopes":["/"],"permissions":[{"actions":[],"notActions":[],"dataActions":["Microsoft.AppConfiguration/configurationStores/*/read"],"notDataActions":[]}],"createdOn":"2019-10-25T18:45:33.7975332Z","updatedOn":"2019-10-25T18:45:33.7975332Z","createdBy":null,"updatedBy":null},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Authorization/roleDefinitions/516239f1-63e1-4d78-a4de-a74fb236a071","type":"Microsoft.Authorization/roleDefinitions","name":"516239f1-63e1-4d78-a4de-a74fb236a071"}]}'
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '679'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Thu, 12 Nov 2020 14:34:07 GMT
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
+      set-cookie:
+      - x-ms-gateway-slice=Production; path=/; secure; samesite=none; httponly
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - role assignment create
+      Connection:
+      - keep-alive
+      ParameterSetName:
+      - --assignee --role --scope
+      User-Agent:
+      - python/3.6.6 (Windows-10-10.0.19041-SP0) msrest/0.6.18 msrest_azure/0.6.3
+        azure-graphrbac/0.60.0 Azure-SDK-For-Python AZURECLI/2.14.0 (MSI)
+      accept-language:
+      - en-US
+    method: GET
+    uri: https://graph.windows.net/00000000-0000-0000-0000-000000000000/users?$filter=userPrincipalName%20eq%20%27azureclitest%40azuresdkteam.onmicrosoft.com%27&api-version=1.6
+  response:
+    body:
+      string: '{"odata.metadata":"https://graph.windows.net/00000000-0000-0000-0000-000000000000/$metadata#directoryObjects","value":[{"odata.type":"Microsoft.DirectoryServices.User","objectType":"User","objectId":"181c08fa-7ac8-48a6-a869-342ab74566a4","deletionTimestamp":null,"accountEnabled":true,"ageGroup":null,"assignedLicenses":[],"assignedPlans":[],"city":null,"companyName":null,"consentProvidedForMinor":null,"country":null,"createdDateTime":"2020-07-01T06:20:59Z","creationType":null,"department":null,"dirSyncEnabled":null,"displayName":"azureclitest","employeeId":null,"facsimileTelephoneNumber":null,"givenName":null,"immutableId":null,"isCompromised":null,"jobTitle":null,"lastDirSyncTime":null,"legalAgeGroupClassification":null,"mail":null,"mailNickname":"azureclitest","mobile":null,"onPremisesDistinguishedName":null,"onPremisesSecurityIdentifier":null,"otherMails":[],"passwordPolicies":null,"passwordProfile":null,"physicalDeliveryOfficeName":null,"postalCode":null,"preferredLanguage":"en-US","provisionedPlans":[],"provisioningErrors":[],"proxyAddresses":[],"refreshTokensValidFromDateTime":"2020-10-12T01:57:23Z","showInAddressList":null,"signInNames":[],"sipProxyAddress":null,"state":null,"streetAddress":null,"surname":null,"telephoneNumber":null,"thumbnailPhoto@odata.mediaEditLink":"directoryObjects/181c08fa-7ac8-48a6-a869-342ab74566a4/Microsoft.DirectoryServices.User/thumbnailPhoto","usageLocation":null,"userIdentities":[],"userPrincipalName":"azureclitest@azuresdkteam.onmicrosoft.com","userState":null,"userStateChangedOn":null,"userType":"Member"}]}'
+    headers:
+      access-control-allow-origin:
+      - '*'
+      cache-control:
+      - no-cache
+      content-length:
+      - '1570'
+      content-type:
+      - application/json; odata=minimalmetadata; streaming=true; charset=utf-8
+      dataserviceversion:
+      - 3.0;
+      date:
+      - Thu, 12 Nov 2020 14:34:08 GMT
+      duration:
+      - '2663224'
+      expires:
+      - '-1'
+      ocp-aad-diagnostics-server-name:
+      - mkefrB4RMzoU8cRuSYCOVVk1ldj6JhOeUuQxmnzjHc4=
+      ocp-aad-session-key:
+      - LA8Yj366_6CDzLi7xTMja2uRngjvLBFBvKkkyhYWNi69Z3cndsoyWsgWZ3v4fRhoyvTCzl0PgYIuFLmjZ7s22Ltp31k59Wd6e4YO0qjLaR5WWJLMcx5ztgYuht6Ikeem.d7P1B1Ow9QHQxEIi1TwpGnNG3rYAf_1kt7ShuN0vy4g
+      pragma:
+      - no-cache
+      request-id:
+      - 91bc7a45-f7f4-4390-bbb3-e6e4d814e0cf
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-aspnet-version:
+      - 4.0.30319
+      x-ms-dirapi-data-contract-version:
+      - '1.6'
+      x-ms-resource-unit:
+      - '2'
+      x-powered-by:
+      - ASP.NET
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"properties": {"roleDefinitionId": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Authorization/roleDefinitions/516239f1-63e1-4d78-a4de-a74fb236a071",
+      "principalId": "181c08fa-7ac8-48a6-a869-342ab74566a4"}}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - role assignment create
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '233'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cookie:
+      - x-ms-gateway-slice=Production
+      ParameterSetName:
+      - --assignee --role --scope
+      User-Agent:
+      - python/3.6.6 (Windows-10-10.0.19041-SP0) msrest/0.6.18 msrest_azure/0.6.3
+        azure-mgmt-authorization/0.61.0 Azure-SDK-For-Python AZURECLI/2.14.0 (MSI)
+      accept-language:
+      - en-US
+    method: PUT
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.AppConfiguration/configurationStores/aadtestavg5ukcz/providers/Microsoft.Authorization/roleAssignments/c0459627-7077-48c2-84a4-ff21dd136643?api-version=2020-04-01-preview
+  response:
+    body:
+      string: '{"properties":{"roleDefinitionId":"/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Authorization/roleDefinitions/516239f1-63e1-4d78-a4de-a74fb236a071","principalId":"181c08fa-7ac8-48a6-a869-342ab74566a4","principalType":"User","scope":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.AppConfiguration/configurationStores/aadtestavg5ukcz","condition":null,"conditionVersion":null,"createdOn":"2020-11-12T14:34:09.2502705Z","updatedOn":"2020-11-12T14:34:09.2502705Z","createdBy":null,"updatedBy":"181c08fa-7ac8-48a6-a869-342ab74566a4","delegatedManagedIdentityResourceId":null,"description":null},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.AppConfiguration/configurationStores/aadtestavg5ukcz/providers/Microsoft.Authorization/roleAssignments/c0459627-7077-48c2-84a4-ff21dd136643","type":"Microsoft.Authorization/roleAssignments","name":"c0459627-7077-48c2-84a4-ff21dd136643"}'
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '1139'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Thu, 12 Nov 2020 14:34:13 GMT
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
+      set-cookie:
+      - x-ms-gateway-slice=Production; path=/; secure; samesite=none; httponly
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-content-type-options:
+      - nosniff
+      x-ms-ratelimit-remaining-subscription-writes:
+      - '1199'
+    status:
+      code: 201
+      message: Created
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/vnd.microsoft.appconfig.kv+json
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - AZURECLI.APPCONFIG/2.14.0 azsdk-python-appconfiguration/1.1.1 Python/3.6.6
+        (Windows-10-10.0.19041-SP0)
+    method: GET
+    uri: https://aadtestavg5ukcz.azconfig.io/kv/Color?api-version=1.0
+  response:
+    body:
+      string: '{"etag":"EgVWvunfjl5RGlMitL16hP8tFu7","key":"Color","label":null,"content_type":null,"value":"Red","tags":{},"locked":false,"last_modified":"2020-11-12T14:34:01+00:00"}'
+    headers:
+      access-control-allow-credentials:
+      - 'true'
+      access-control-allow-origin:
+      - '*'
+      access-control-expose-headers:
+      - DNT, X-CustomHeader, Keep-Alive, User-Agent, X-Requested-With, If-Modified-Since,
+        Cache-Control, Content-Type, Authorization, x-ms-client-request-id, x-ms-useragent,
+        x-ms-content-sha256, x-ms-date, host, Accept, Accept-Datetime, Date, If-Match,
+        If-None-Match, Sync-Token, x-ms-return-client-request-id, ETag, Last-Modified,
+        Link, Memento-Datetime, retry-after-ms, x-ms-request-id, WWW-Authenticate
+      connection:
+      - keep-alive
+      content-type:
+      - application/vnd.microsoft.appconfig.kv+json; charset=utf-8
+      date:
+      - Thu, 12 Nov 2020 14:49:15 GMT
+      etag:
+      - '"EgVWvunfjl5RGlMitL16hP8tFu7"'
+      last-modified:
+      - Thu, 12 Nov 2020 14:34:01 GMT
+      server:
+      - openresty/1.17.8.2
+      strict-transport-security:
+      - max-age=15724800; includeSubDomains
+      sync-token:
+      - zAJw6V16=NDo1IzI5NjMzMzk=;sn=2963339
+      transfer-encoding:
+      - chunked
+      x-ms-tenant-name:
+      - aadtestavg5ukcz
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - appconfig feature show
+      Connection:
+      - keep-alive
+      ParameterSetName:
+      - --name --auth-mode --feature
+      User-Agent:
+      - python/3.6.6 (Windows-10-10.0.19041-SP0) msrest/0.6.18 msrest_azure/0.6.3
+        azure-mgmt-appconfiguration/0.6.0 Azure-SDK-For-Python AZURECLI/2.14.0 (MSI)
+      accept-language:
+      - en-US
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.AppConfiguration/configurationStores?api-version=2020-06-01
+  response:
+    body:
+      string: '{"value":[{"type":"Microsoft.AppConfiguration/configurationStores","properties":{"provisioningState":"Succeeded","creationDate":"2020-11-12T14:33:50+00:00","endpoint":"https://aadtestavg5ukcz.azconfig.io","encryption":{"keyVaultProperties":null},"privateEndpointConnections":null},"sku":{"name":"standard"},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.AppConfiguration/configurationStores/aadtestavg5ukcz","name":"AadTest000002","location":"eastus","tags":{}}],"nextLink":"https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.AppConfiguration/configurationStores?api-version=2020-06-01&$skipToken=aadtestavg5ukcz"}'
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '787'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Thu, 12 Nov 2020 14:49:17 GMT
+      expires:
+      - '-1'
+      link:
+      - </subscriptions/0b1f6471-1bf0-4dda-aec3-cb9272f09590/providers/Microsoft.AppConfiguration/configurationStores?api-version=2020-06-01&$skipToken=aadtestavg5ukcz>;
+        rel="next"
+      pragma:
+      - no-cache
+      server:
+      - nginx/1.17.10
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding,Accept-Encoding
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/vnd.microsoft.appconfig.kv+json
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - AZURECLI.APPCONFIG/2.14.0 azsdk-python-appconfiguration/1.1.1 Python/3.6.6
+        (Windows-10-10.0.19041-SP0)
+    method: GET
+    uri: https://aadtestavg5ukcz.azconfig.io/kv/.appconfig.featureflag%2FBeta?api-version=1.0
+  response:
+    body:
+      string: '{"etag":"RsS7CflTnsGWEfNd5hAwQWqhj0A","key":".appconfig.featureflag/Beta","label":null,"content_type":"application/vnd.microsoft.appconfig.ff+json;charset=utf-8","value":"{\"id\":
+        \"Beta\", \"description\": null, \"enabled\": false, \"conditions\": {\"client_filters\":
+        []}}","tags":{},"locked":false,"last_modified":"2020-11-12T14:34:03+00:00"}'
+    headers:
+      access-control-allow-credentials:
+      - 'true'
+      access-control-allow-origin:
+      - '*'
+      access-control-expose-headers:
+      - DNT, X-CustomHeader, Keep-Alive, User-Agent, X-Requested-With, If-Modified-Since,
+        Cache-Control, Content-Type, Authorization, x-ms-client-request-id, x-ms-useragent,
+        x-ms-content-sha256, x-ms-date, host, Accept, Accept-Datetime, Date, If-Match,
+        If-None-Match, Sync-Token, x-ms-return-client-request-id, ETag, Last-Modified,
+        Link, Memento-Datetime, retry-after-ms, x-ms-request-id, WWW-Authenticate
+      connection:
+      - keep-alive
+      content-type:
+      - application/vnd.microsoft.appconfig.kv+json; charset=utf-8
+      date:
+      - Thu, 12 Nov 2020 14:49:19 GMT
+      etag:
+      - '"RsS7CflTnsGWEfNd5hAwQWqhj0A"'
+      last-modified:
+      - Thu, 12 Nov 2020 14:34:03 GMT
+      server:
+      - openresty/1.17.8.2
+      strict-transport-security:
+      - max-age=15724800; includeSubDomains
+      sync-token:
+      - zAJw6V16=NDo1IzI5NjMzMzk=;sn=2963339
+      transfer-encoding:
+      - chunked
+      x-ms-tenant-name:
+      - aadtestavg5ukcz
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/vnd.microsoft.appconfig.kv+json
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - AZURECLI.APPCONFIG/2.14.0 azsdk-python-appconfiguration/1.1.1 Python/3.6.6
+        (Windows-10-10.0.19041-SP0)
+    method: GET
+    uri: https://aadtestavg5ukcz.azconfig.io/kv/Color?api-version=1.0
+  response:
+    body:
+      string: '{"etag":"EgVWvunfjl5RGlMitL16hP8tFu7","key":"Color","label":null,"content_type":null,"value":"Red","tags":{},"locked":false,"last_modified":"2020-11-12T14:34:01+00:00"}'
+    headers:
+      access-control-allow-credentials:
+      - 'true'
+      access-control-allow-origin:
+      - '*'
+      access-control-expose-headers:
+      - DNT, X-CustomHeader, Keep-Alive, User-Agent, X-Requested-With, If-Modified-Since,
+        Cache-Control, Content-Type, Authorization, x-ms-client-request-id, x-ms-useragent,
+        x-ms-content-sha256, x-ms-date, host, Accept, Accept-Datetime, Date, If-Match,
+        If-None-Match, Sync-Token, x-ms-return-client-request-id, ETag, Last-Modified,
+        Link, Memento-Datetime, retry-after-ms, x-ms-request-id, WWW-Authenticate
+      connection:
+      - keep-alive
+      content-type:
+      - application/vnd.microsoft.appconfig.kv+json; charset=utf-8
+      date:
+      - Thu, 12 Nov 2020 14:49:21 GMT
+      etag:
+      - '"EgVWvunfjl5RGlMitL16hP8tFu7"'
+      last-modified:
+      - Thu, 12 Nov 2020 14:34:01 GMT
+      server:
+      - openresty/1.17.8.2
+      strict-transport-security:
+      - max-age=15724800; includeSubDomains
+      sync-token:
+      - zAJw6V16=NDo1IzI5NjMzMzk=;sn=2963339
+      transfer-encoding:
+      - chunked
+      x-ms-tenant-name:
+      - aadtestavg5ukcz
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"key": "Color", "value": "Blue", "tags": {}}'
+    headers:
+      Accept:
+      - application/vnd.microsoft.appconfig.kv+json
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '45'
+      Content-Type:
+      - application/json; charset=utf-8
+      If-Match:
+      - '"EgVWvunfjl5RGlMitL16hP8tFu7"'
+      Sync-Token:
+      - zAJw6V16=NDo1IzI5NjMzMzk=
+      User-Agent:
+      - AZURECLI.APPCONFIG/2.14.0 azsdk-python-appconfiguration/1.1.1 Python/3.6.6
+        (Windows-10-10.0.19041-SP0)
+    method: PUT
+    uri: https://aadtestavg5ukcz.azconfig.io/kv/Color?api-version=1.0
+  response:
+    body:
+      string: ''
+    headers:
+      access-control-allow-credentials:
+      - 'true'
+      access-control-allow-origin:
+      - '*'
+      access-control-expose-headers:
+      - DNT, X-CustomHeader, Keep-Alive, User-Agent, X-Requested-With, If-Modified-Since,
+        Cache-Control, Content-Type, Authorization, x-ms-client-request-id, x-ms-useragent,
+        x-ms-content-sha256, x-ms-date, host, Accept, Accept-Datetime, Date, If-Match,
+        If-None-Match, Sync-Token, x-ms-return-client-request-id, ETag, Last-Modified,
+        Link, Memento-Datetime, retry-after-ms, x-ms-request-id, WWW-Authenticate
+      connection:
+      - keep-alive
+      content-length:
+      - '0'
+      date:
+      - Thu, 12 Nov 2020 14:49:21 GMT
+      server:
+      - openresty/1.17.8.2
+      strict-transport-security:
+      - max-age=15724800; includeSubDomains
+      x-ms-tenant-name:
+      - aadtestavg5ukcz
+    status:
+      code: 403
+      message: Forbidden
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/vnd.microsoft.appconfig.kvset+json
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - AZURECLI.APPCONFIG/2.14.0 azsdk-python-appconfiguration/1.1.1 Python/3.6.6
+        (Windows-10-10.0.19041-SP0)
+    method: GET
+    uri: https://aadtestavg5ukcz.azconfig.io/kv?label=%00&api-version=1.0&$Select=
+  response:
+    body:
+      string: '{"items":[{"etag":"RsS7CflTnsGWEfNd5hAwQWqhj0A","key":".appconfig.featureflag/Beta","label":null,"content_type":"application/vnd.microsoft.appconfig.ff+json;charset=utf-8","value":"{\"id\":
+        \"Beta\", \"description\": null, \"enabled\": false, \"conditions\": {\"client_filters\":
+        []}}","tags":{},"locked":false,"last_modified":"2020-11-12T14:34:03+00:00"},{"etag":"EgVWvunfjl5RGlMitL16hP8tFu7","key":"Color","label":null,"content_type":null,"value":"Red","tags":{},"locked":false,"last_modified":"2020-11-12T14:34:01+00:00"}]}'
+    headers:
+      access-control-allow-credentials:
+      - 'true'
+      access-control-allow-origin:
+      - '*'
+      access-control-expose-headers:
+      - DNT, X-CustomHeader, Keep-Alive, User-Agent, X-Requested-With, If-Modified-Since,
+        Cache-Control, Content-Type, Authorization, x-ms-client-request-id, x-ms-useragent,
+        x-ms-content-sha256, x-ms-date, host, Accept, Accept-Datetime, Date, If-Match,
+        If-None-Match, Sync-Token, x-ms-return-client-request-id, ETag, Last-Modified,
+        Link, Memento-Datetime, retry-after-ms, x-ms-request-id, WWW-Authenticate
+      connection:
+      - keep-alive
+      content-type:
+      - application/vnd.microsoft.appconfig.kvset+json; charset=utf-8
+      date:
+      - Thu, 12 Nov 2020 14:49:22 GMT
+      server:
+      - openresty/1.17.8.2
+      strict-transport-security:
+      - max-age=15724800; includeSubDomains
+      sync-token:
+      - zAJw6V16=NDo1IzI5NjMzMzk=;sn=2963339
+      transfer-encoding:
+      - chunked
+      x-ms-tenant-name:
+      - aadtestavg5ukcz
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/vnd.microsoft.appconfig.kvset+json
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - AZURECLI.APPCONFIG/2.14.0 azsdk-python-appconfiguration/1.1.1 Python/3.6.6
+        (Windows-10-10.0.19041-SP0)
+    method: GET
+    uri: https://aadtestavg5ukcz.azconfig.io/kv?key=.appconfig.featureflag%2F%2A&label=%00&api-version=1.0
+  response:
+    body:
+      string: '{"items":[{"etag":"RsS7CflTnsGWEfNd5hAwQWqhj0A","key":".appconfig.featureflag/Beta","label":null,"content_type":"application/vnd.microsoft.appconfig.ff+json;charset=utf-8","value":"{\"id\":
+        \"Beta\", \"description\": null, \"enabled\": false, \"conditions\": {\"client_filters\":
+        []}}","tags":{},"locked":false,"last_modified":"2020-11-12T14:34:03+00:00"}]}'
+    headers:
+      access-control-allow-credentials:
+      - 'true'
+      access-control-allow-origin:
+      - '*'
+      access-control-expose-headers:
+      - DNT, X-CustomHeader, Keep-Alive, User-Agent, X-Requested-With, If-Modified-Since,
+        Cache-Control, Content-Type, Authorization, x-ms-client-request-id, x-ms-useragent,
+        x-ms-content-sha256, x-ms-date, host, Accept, Accept-Datetime, Date, If-Match,
+        If-None-Match, Sync-Token, x-ms-return-client-request-id, ETag, Last-Modified,
+        Link, Memento-Datetime, retry-after-ms, x-ms-request-id, WWW-Authenticate
+      connection:
+      - keep-alive
+      content-type:
+      - application/vnd.microsoft.appconfig.kvset+json; charset=utf-8
+      date:
+      - Thu, 12 Nov 2020 14:49:24 GMT
+      server:
+      - openresty/1.17.8.2
+      strict-transport-security:
+      - max-age=15724800; includeSubDomains
+      sync-token:
+      - zAJw6V16=NDo1IzI5NjMzMzk=;sn=2963339
+      transfer-encoding:
+      - chunked
+      x-ms-tenant-name:
+      - aadtestavg5ukcz
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - role assignment create
+      Connection:
+      - keep-alive
+      ParameterSetName:
+      - --assignee --role --scope
+      User-Agent:
+      - python/3.6.6 (Windows-10-10.0.19041-SP0) msrest/0.6.18 msrest_azure/0.6.3
+        azure-mgmt-authorization/0.61.0 Azure-SDK-For-Python AZURECLI/2.14.0 (MSI)
+      accept-language:
+      - en-US
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.AppConfiguration/configurationStores/aadtestavg5ukcz/providers/Microsoft.Authorization/roleDefinitions?$filter=roleName%20eq%20%27App%20Configuration%20Data%20Owner%27&api-version=2018-01-01-preview
+  response:
+    body:
+      string: '{"value":[{"properties":{"roleName":"App Configuration Data Owner","type":"BuiltInRole","description":"Allows
+        full access to App Configuration data.","assignableScopes":["/"],"permissions":[{"actions":[],"notActions":[],"dataActions":["Microsoft.AppConfiguration/configurationStores/*/read","Microsoft.AppConfiguration/configurationStores/*/write","Microsoft.AppConfiguration/configurationStores/*/delete"],"notDataActions":[]}],"createdOn":"2019-10-25T18:41:40.1185063Z","updatedOn":"2019-10-25T18:41:40.1185063Z","createdBy":null,"updatedBy":null},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Authorization/roleDefinitions/5ae67dd6-50cb-40e7-96ff-dc2bfa4b606b","type":"Microsoft.Authorization/roleDefinitions","name":"5ae67dd6-50cb-40e7-96ff-dc2bfa4b606b"}]}'
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '793'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Thu, 12 Nov 2020 14:49:24 GMT
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
+      set-cookie:
+      - x-ms-gateway-slice=Production; path=/; secure; samesite=none; httponly
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - role assignment create
+      Connection:
+      - keep-alive
+      ParameterSetName:
+      - --assignee --role --scope
+      User-Agent:
+      - python/3.6.6 (Windows-10-10.0.19041-SP0) msrest/0.6.18 msrest_azure/0.6.3
+        azure-graphrbac/0.60.0 Azure-SDK-For-Python AZURECLI/2.14.0 (MSI)
+      accept-language:
+      - en-US
+    method: GET
+    uri: https://graph.windows.net/00000000-0000-0000-0000-000000000000/users?$filter=userPrincipalName%20eq%20%27azureclitest%40azuresdkteam.onmicrosoft.com%27&api-version=1.6
+  response:
+    body:
+      string: '{"odata.metadata":"https://graph.windows.net/00000000-0000-0000-0000-000000000000/$metadata#directoryObjects","value":[{"odata.type":"Microsoft.DirectoryServices.User","objectType":"User","objectId":"181c08fa-7ac8-48a6-a869-342ab74566a4","deletionTimestamp":null,"accountEnabled":true,"ageGroup":null,"assignedLicenses":[],"assignedPlans":[],"city":null,"companyName":null,"consentProvidedForMinor":null,"country":null,"createdDateTime":"2020-07-01T06:20:59Z","creationType":null,"department":null,"dirSyncEnabled":null,"displayName":"azureclitest","employeeId":null,"facsimileTelephoneNumber":null,"givenName":null,"immutableId":null,"isCompromised":null,"jobTitle":null,"lastDirSyncTime":null,"legalAgeGroupClassification":null,"mail":null,"mailNickname":"azureclitest","mobile":null,"onPremisesDistinguishedName":null,"onPremisesSecurityIdentifier":null,"otherMails":[],"passwordPolicies":null,"passwordProfile":null,"physicalDeliveryOfficeName":null,"postalCode":null,"preferredLanguage":"en-US","provisionedPlans":[],"provisioningErrors":[],"proxyAddresses":[],"refreshTokensValidFromDateTime":"2020-10-12T01:57:23Z","showInAddressList":null,"signInNames":[],"sipProxyAddress":null,"state":null,"streetAddress":null,"surname":null,"telephoneNumber":null,"thumbnailPhoto@odata.mediaEditLink":"directoryObjects/181c08fa-7ac8-48a6-a869-342ab74566a4/Microsoft.DirectoryServices.User/thumbnailPhoto","usageLocation":null,"userIdentities":[],"userPrincipalName":"azureclitest@azuresdkteam.onmicrosoft.com","userState":null,"userStateChangedOn":null,"userType":"Member"}]}'
+    headers:
+      access-control-allow-origin:
+      - '*'
+      cache-control:
+      - no-cache
+      content-length:
+      - '1570'
+      content-type:
+      - application/json; odata=minimalmetadata; streaming=true; charset=utf-8
+      dataserviceversion:
+      - 3.0;
+      date:
+      - Thu, 12 Nov 2020 14:49:25 GMT
+      duration:
+      - '2637309'
+      expires:
+      - '-1'
+      ocp-aad-diagnostics-server-name:
+      - 1S+N/tZha+pZ3ybKpMic30zCghNCMbGlad2g6J9WHMs=
+      ocp-aad-session-key:
+      - FXMg14KjkcLrSbVtdSOj_x6J2nt9idifxWD8KgBKCuzAx4sz93KzKHWfbWSAwQ6cwBYUXTIpnxPIG7eFlTncZoe7old8b9Oem_t4Jbcw2q4VECaE_Xv4mAHikGjLhPV2.nGVTnICqEaZYiI2vOCVASoZcqSVIegDt8zWQZ97HKLA
+      pragma:
+      - no-cache
+      request-id:
+      - b5611476-749e-47bd-b504-811d69ae81fd
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-aspnet-version:
+      - 4.0.30319
+      x-ms-dirapi-data-contract-version:
+      - '1.6'
+      x-ms-resource-unit:
+      - '2'
+      x-powered-by:
+      - ASP.NET
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"properties": {"roleDefinitionId": "/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Authorization/roleDefinitions/5ae67dd6-50cb-40e7-96ff-dc2bfa4b606b",
+      "principalId": "181c08fa-7ac8-48a6-a869-342ab74566a4"}}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - role assignment create
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '233'
+      Content-Type:
+      - application/json; charset=utf-8
+      Cookie:
+      - x-ms-gateway-slice=Production
+      ParameterSetName:
+      - --assignee --role --scope
+      User-Agent:
+      - python/3.6.6 (Windows-10-10.0.19041-SP0) msrest/0.6.18 msrest_azure/0.6.3
+        azure-mgmt-authorization/0.61.0 Azure-SDK-For-Python AZURECLI/2.14.0 (MSI)
+      accept-language:
+      - en-US
+    method: PUT
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.AppConfiguration/configurationStores/aadtestavg5ukcz/providers/Microsoft.Authorization/roleAssignments/c6b16915-f0ae-4296-851f-6bcc90df2333?api-version=2020-04-01-preview
+  response:
+    body:
+      string: '{"properties":{"roleDefinitionId":"/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Authorization/roleDefinitions/5ae67dd6-50cb-40e7-96ff-dc2bfa4b606b","principalId":"181c08fa-7ac8-48a6-a869-342ab74566a4","principalType":"User","scope":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.AppConfiguration/configurationStores/aadtestavg5ukcz","condition":null,"conditionVersion":null,"createdOn":"2020-11-12T14:49:25.8461109Z","updatedOn":"2020-11-12T14:49:25.8461109Z","createdBy":null,"updatedBy":"181c08fa-7ac8-48a6-a869-342ab74566a4","delegatedManagedIdentityResourceId":null,"description":null},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.AppConfiguration/configurationStores/aadtestavg5ukcz/providers/Microsoft.Authorization/roleAssignments/c6b16915-f0ae-4296-851f-6bcc90df2333","type":"Microsoft.Authorization/roleAssignments","name":"c6b16915-f0ae-4296-851f-6bcc90df2333"}'
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '1139'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Thu, 12 Nov 2020 14:49:30 GMT
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
+      set-cookie:
+      - x-ms-gateway-slice=Production; path=/; secure; samesite=none; httponly
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-content-type-options:
+      - nosniff
+      x-ms-ratelimit-remaining-subscription-writes:
+      - '1199'
+    status:
+      code: 201
+      message: Created
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/vnd.microsoft.appconfig.kv+json
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - AZURECLI.APPCONFIG/2.14.0 azsdk-python-appconfiguration/1.1.1 Python/3.6.6
+        (Windows-10-10.0.19041-SP0)
+    method: GET
+    uri: https://aadtestavg5ukcz.azconfig.io/kv/Color?api-version=1.0
+  response:
+    body:
+      string: '{"etag":"EgVWvunfjl5RGlMitL16hP8tFu7","key":"Color","label":null,"content_type":null,"value":"Red","tags":{},"locked":false,"last_modified":"2020-11-12T14:34:01+00:00"}'
+    headers:
+      access-control-allow-credentials:
+      - 'true'
+      access-control-allow-origin:
+      - '*'
+      access-control-expose-headers:
+      - DNT, X-CustomHeader, Keep-Alive, User-Agent, X-Requested-With, If-Modified-Since,
+        Cache-Control, Content-Type, Authorization, x-ms-client-request-id, x-ms-useragent,
+        x-ms-content-sha256, x-ms-date, host, Accept, Accept-Datetime, Date, If-Match,
+        If-None-Match, Sync-Token, x-ms-return-client-request-id, ETag, Last-Modified,
+        Link, Memento-Datetime, retry-after-ms, x-ms-request-id, WWW-Authenticate
+      connection:
+      - keep-alive
+      content-type:
+      - application/vnd.microsoft.appconfig.kv+json; charset=utf-8
+      date:
+      - Thu, 12 Nov 2020 15:04:32 GMT
+      etag:
+      - '"EgVWvunfjl5RGlMitL16hP8tFu7"'
+      last-modified:
+      - Thu, 12 Nov 2020 14:34:01 GMT
+      server:
+      - openresty/1.17.8.2
+      strict-transport-security:
+      - max-age=15724800; includeSubDomains
+      sync-token:
+      - zAJw6V16=NDo1IzI5NjM1NDU=;sn=2963545
+      transfer-encoding:
+      - chunked
+      x-ms-tenant-name:
+      - aadtestavg5ukcz
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"key": "Color", "value": "Blue", "tags": {}}'
+    headers:
+      Accept:
+      - application/vnd.microsoft.appconfig.kv+json
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '45'
+      Content-Type:
+      - application/json; charset=utf-8
+      If-Match:
+      - '"EgVWvunfjl5RGlMitL16hP8tFu7"'
+      Sync-Token:
+      - zAJw6V16=NDo1IzI5NjM1NDU=
+      User-Agent:
+      - AZURECLI.APPCONFIG/2.14.0 azsdk-python-appconfiguration/1.1.1 Python/3.6.6
+        (Windows-10-10.0.19041-SP0)
+    method: PUT
+    uri: https://aadtestavg5ukcz.azconfig.io/kv/Color?api-version=1.0
+  response:
+    body:
+      string: '{"etag":"FrXIwXRSatY1JWrTrM6sJeSE9tK","key":"Color","label":null,"content_type":null,"value":"Blue","tags":{},"locked":false,"last_modified":"2020-11-12T15:04:33+00:00"}'
+    headers:
+      access-control-allow-credentials:
+      - 'true'
+      access-control-allow-origin:
+      - '*'
+      access-control-expose-headers:
+      - DNT, X-CustomHeader, Keep-Alive, User-Agent, X-Requested-With, If-Modified-Since,
+        Cache-Control, Content-Type, Authorization, x-ms-client-request-id, x-ms-useragent,
+        x-ms-content-sha256, x-ms-date, host, Accept, Accept-Datetime, Date, If-Match,
+        If-None-Match, Sync-Token, x-ms-return-client-request-id, ETag, Last-Modified,
+        Link, Memento-Datetime, retry-after-ms, x-ms-request-id, WWW-Authenticate
+      connection:
+      - keep-alive
+      content-type:
+      - application/vnd.microsoft.appconfig.kv+json; charset=utf-8
+      date:
+      - Thu, 12 Nov 2020 15:04:32 GMT
+      etag:
+      - '"FrXIwXRSatY1JWrTrM6sJeSE9tK"'
+      last-modified:
+      - Thu, 12 Nov 2020 15:04:33 GMT
+      server:
+      - openresty/1.17.8.2
+      strict-transport-security:
+      - max-age=15724800; includeSubDomains
+      sync-token:
+      - zAJw6V16=NDo1IzI5NjM1NDY=;sn=2963546
+      transfer-encoding:
+      - chunked
+      x-ms-tenant-name:
+      - aadtestavg5ukcz
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/vnd.microsoft.appconfig.kv+json
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - AZURECLI.APPCONFIG/2.14.0 azsdk-python-appconfiguration/1.1.1 Python/3.6.6
+        (Windows-10-10.0.19041-SP0)
+    method: GET
+    uri: https://aadtestavg5ukcz.azconfig.io/kv/HostSecrets?api-version=1.0
+  response:
+    body:
+      string: ''
+    headers:
+      access-control-allow-credentials:
+      - 'true'
+      access-control-allow-origin:
+      - '*'
+      access-control-expose-headers:
+      - DNT, X-CustomHeader, Keep-Alive, User-Agent, X-Requested-With, If-Modified-Since,
+        Cache-Control, Content-Type, Authorization, x-ms-client-request-id, x-ms-useragent,
+        x-ms-content-sha256, x-ms-date, host, Accept, Accept-Datetime, Date, If-Match,
+        If-None-Match, Sync-Token, x-ms-return-client-request-id, ETag, Last-Modified,
+        Link, Memento-Datetime, retry-after-ms, x-ms-request-id, WWW-Authenticate
+      connection:
+      - keep-alive
+      content-length:
+      - '0'
+      date:
+      - Thu, 12 Nov 2020 15:04:34 GMT
+      server:
+      - openresty/1.17.8.2
+      strict-transport-security:
+      - max-age=15724800; includeSubDomains
+      x-ms-tenant-name:
+      - aadtestavg5ukcz
+    status:
+      code: 404
+      message: Not Found
+- request:
+    body: '{"key": "HostSecrets", "content_type": "application/vnd.microsoft.appconfig.keyvaultref+json;charset=utf-8",
+      "value": "{\"uri\":\"https://fake.vault.azure.net/secrets/fakesecret\"}"}'
+    headers:
+      Accept:
+      - application/vnd.microsoft.appconfig.kv+json
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '182'
+      Content-Type:
+      - application/json; charset=utf-8
+      If-None-Match:
+      - '*'
+      User-Agent:
+      - AZURECLI.APPCONFIG/2.14.0 azsdk-python-appconfiguration/1.1.1 Python/3.6.6
+        (Windows-10-10.0.19041-SP0)
+    method: PUT
+    uri: https://aadtestavg5ukcz.azconfig.io/kv/HostSecrets?api-version=1.0
+  response:
+    body:
+      string: '{"etag":"AzDKuXUIDntu4woJxSDrUUqf3wr","key":"HostSecrets","label":null,"content_type":"application/vnd.microsoft.appconfig.keyvaultref+json;charset=utf-8","value":"{\"uri\":\"https://fake.vault.azure.net/secrets/fakesecret\"}","tags":{},"locked":false,"last_modified":"2020-11-12T15:04:35+00:00"}'
+    headers:
+      access-control-allow-credentials:
+      - 'true'
+      access-control-allow-origin:
+      - '*'
+      access-control-expose-headers:
+      - DNT, X-CustomHeader, Keep-Alive, User-Agent, X-Requested-With, If-Modified-Since,
+        Cache-Control, Content-Type, Authorization, x-ms-client-request-id, x-ms-useragent,
+        x-ms-content-sha256, x-ms-date, host, Accept, Accept-Datetime, Date, If-Match,
+        If-None-Match, Sync-Token, x-ms-return-client-request-id, ETag, Last-Modified,
+        Link, Memento-Datetime, retry-after-ms, x-ms-request-id, WWW-Authenticate
+      connection:
+      - keep-alive
+      content-type:
+      - application/vnd.microsoft.appconfig.kv+json; charset=utf-8
+      date:
+      - Thu, 12 Nov 2020 15:04:34 GMT
+      etag:
+      - '"AzDKuXUIDntu4woJxSDrUUqf3wr"'
+      last-modified:
+      - Thu, 12 Nov 2020 15:04:35 GMT
+      server:
+      - openresty/1.17.8.2
+      strict-transport-security:
+      - max-age=15724800; includeSubDomains
+      sync-token:
+      - zAJw6V16=NDo1IzI5NjM1NDc=;sn=2963547
+      transfer-encoding:
+      - chunked
+      x-ms-tenant-name:
+      - aadtestavg5ukcz
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"key": "Language", "value": "spanish"}'
+    headers:
+      Accept:
+      - application/vnd.microsoft.appconfig.kv+json
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '39'
+      Content-Type:
+      - application/json; charset=utf-8
+      User-Agent:
+      - AZURECLI.APPCONFIG/2.14.0 azsdk-python-appconfiguration/1.1.1 Python/3.6.6
+        (Windows-10-10.0.19041-SP0)
+    method: PUT
+    uri: https://aadtestavg5ukcz.azconfig.io/kv/Language?api-version=1.0
+  response:
+    body:
+      string: '{"etag":"1IO8J8PUCrtzwPGBW3O1WSYQt26","key":"Language","label":null,"content_type":null,"value":"spanish","tags":{},"locked":false,"last_modified":"2020-11-12T15:04:36+00:00"}'
+    headers:
+      access-control-allow-credentials:
+      - 'true'
+      access-control-allow-origin:
+      - '*'
+      access-control-expose-headers:
+      - DNT, X-CustomHeader, Keep-Alive, User-Agent, X-Requested-With, If-Modified-Since,
+        Cache-Control, Content-Type, Authorization, x-ms-client-request-id, x-ms-useragent,
+        x-ms-content-sha256, x-ms-date, host, Accept, Accept-Datetime, Date, If-Match,
+        If-None-Match, Sync-Token, x-ms-return-client-request-id, ETag, Last-Modified,
+        Link, Memento-Datetime, retry-after-ms, x-ms-request-id, WWW-Authenticate
+      connection:
+      - keep-alive
+      content-type:
+      - application/vnd.microsoft.appconfig.kv+json; charset=utf-8
+      date:
+      - Thu, 12 Nov 2020 15:04:36 GMT
+      etag:
+      - '"1IO8J8PUCrtzwPGBW3O1WSYQt26"'
+      last-modified:
+      - Thu, 12 Nov 2020 15:04:36 GMT
+      server:
+      - openresty/1.17.8.2
+      strict-transport-security:
+      - max-age=15724800; includeSubDomains
+      sync-token:
+      - zAJw6V16=NDo1IzI5NjM1NDg=;sn=2963548
+      transfer-encoding:
+      - chunked
+      x-ms-tenant-name:
+      - aadtestavg5ukcz
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"key": "font-size", "value": "34"}'
+    headers:
+      Accept:
+      - application/vnd.microsoft.appconfig.kv+json
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '35'
+      Content-Type:
+      - application/json; charset=utf-8
+      Sync-Token:
+      - zAJw6V16=NDo1IzI5NjM1NDg=
+      User-Agent:
+      - AZURECLI.APPCONFIG/2.14.0 azsdk-python-appconfiguration/1.1.1 Python/3.6.6
+        (Windows-10-10.0.19041-SP0)
+    method: PUT
+    uri: https://aadtestavg5ukcz.azconfig.io/kv/font-size?api-version=1.0
+  response:
+    body:
+      string: '{"etag":"sDb8rkbBlVeUWWpIJEBO2BxLvm9","key":"font-size","label":null,"content_type":null,"value":"34","tags":{},"locked":false,"last_modified":"2020-11-12T15:04:36+00:00"}'
+    headers:
+      access-control-allow-credentials:
+      - 'true'
+      access-control-allow-origin:
+      - '*'
+      access-control-expose-headers:
+      - DNT, X-CustomHeader, Keep-Alive, User-Agent, X-Requested-With, If-Modified-Since,
+        Cache-Control, Content-Type, Authorization, x-ms-client-request-id, x-ms-useragent,
+        x-ms-content-sha256, x-ms-date, host, Accept, Accept-Datetime, Date, If-Match,
+        If-None-Match, Sync-Token, x-ms-return-client-request-id, ETag, Last-Modified,
+        Link, Memento-Datetime, retry-after-ms, x-ms-request-id, WWW-Authenticate
+      connection:
+      - keep-alive
+      content-type:
+      - application/vnd.microsoft.appconfig.kv+json; charset=utf-8
+      date:
+      - Thu, 12 Nov 2020 15:04:36 GMT
+      etag:
+      - '"sDb8rkbBlVeUWWpIJEBO2BxLvm9"'
+      last-modified:
+      - Thu, 12 Nov 2020 15:04:36 GMT
+      server:
+      - openresty/1.17.8.2
+      strict-transport-security:
+      - max-age=15724800; includeSubDomains
+      sync-token:
+      - zAJw6V16=NDo1IzI5NjM1NDk=;sn=2963549
+      transfer-encoding:
+      - chunked
+      x-ms-tenant-name:
+      - aadtestavg5ukcz
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"key": ".appconfig.featureflag/Percentage", "content_type": "application/vnd.microsoft.appconfig.ff+json;charset=utf-8",
+      "value": "{\"id\": \"Percentage\", \"description\": null, \"enabled\": true,
+      \"conditions\": {\"client_filters\": []}}"}'
+    headers:
+      Accept:
+      - application/vnd.microsoft.appconfig.kv+json
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '242'
+      Content-Type:
+      - application/json; charset=utf-8
+      Sync-Token:
+      - zAJw6V16=NDo1IzI5NjM1NDk=
+      User-Agent:
+      - AZURECLI.APPCONFIG/2.14.0 azsdk-python-appconfiguration/1.1.1 Python/3.6.6
+        (Windows-10-10.0.19041-SP0)
+    method: PUT
+    uri: https://aadtestavg5ukcz.azconfig.io/kv/.appconfig.featureflag%2FPercentage?api-version=1.0
+  response:
+    body:
+      string: '{"etag":"HDnPXA9WNfVweHJm04Mcvyp9ip7","key":".appconfig.featureflag/Percentage","label":null,"content_type":"application/vnd.microsoft.appconfig.ff+json;charset=utf-8","value":"{\"id\":
+        \"Percentage\", \"description\": null, \"enabled\": true, \"conditions\":
+        {\"client_filters\": []}}","tags":{},"locked":false,"last_modified":"2020-11-12T15:04:37+00:00"}'
+    headers:
+      access-control-allow-credentials:
+      - 'true'
+      access-control-allow-origin:
+      - '*'
+      access-control-expose-headers:
+      - DNT, X-CustomHeader, Keep-Alive, User-Agent, X-Requested-With, If-Modified-Since,
+        Cache-Control, Content-Type, Authorization, x-ms-client-request-id, x-ms-useragent,
+        x-ms-content-sha256, x-ms-date, host, Accept, Accept-Datetime, Date, If-Match,
+        If-None-Match, Sync-Token, x-ms-return-client-request-id, ETag, Last-Modified,
+        Link, Memento-Datetime, retry-after-ms, x-ms-request-id, WWW-Authenticate
+      connection:
+      - keep-alive
+      content-type:
+      - application/vnd.microsoft.appconfig.kv+json; charset=utf-8
+      date:
+      - Thu, 12 Nov 2020 15:04:36 GMT
+      etag:
+      - '"HDnPXA9WNfVweHJm04Mcvyp9ip7"'
+      last-modified:
+      - Thu, 12 Nov 2020 15:04:37 GMT
+      server:
+      - openresty/1.17.8.2
+      strict-transport-security:
+      - max-age=15724800; includeSubDomains
+      sync-token:
+      - zAJw6V16=NDo1IzI5NjM1NTA=;sn=2963550
+      transfer-encoding:
+      - chunked
+      x-ms-tenant-name:
+      - aadtestavg5ukcz
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"key": ".appconfig.featureflag/Timestamp", "content_type": "application/vnd.microsoft.appconfig.ff+json;charset=utf-8",
+      "value": "{\"id\": \"Timestamp\", \"description\": null, \"enabled\": true,
+      \"conditions\": {\"client_filters\": [{\"name\": \"Local Tests\", \"parameters\":
+      {\"StartTime\": \"2019-01-01T00:00:00Z\", \"EndTime\": \"2019-09-01T00:00:00Z\"}},
+      {\"name\": \"Production Tests\", \"parameters\": {\"StartTime\": \"2019-09-02T00:00:00Z\",
+      \"EndTime\": \"2019-11-01T00:00:00Z\"}}]}}"}'
+    headers:
+      Accept:
+      - application/vnd.microsoft.appconfig.kv+json
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '497'
+      Content-Type:
+      - application/json; charset=utf-8
+      Sync-Token:
+      - zAJw6V16=NDo1IzI5NjM1NTA=
+      User-Agent:
+      - AZURECLI.APPCONFIG/2.14.0 azsdk-python-appconfiguration/1.1.1 Python/3.6.6
+        (Windows-10-10.0.19041-SP0)
+    method: PUT
+    uri: https://aadtestavg5ukcz.azconfig.io/kv/.appconfig.featureflag%2FTimestamp?api-version=1.0
+  response:
+    body:
+      string: '{"etag":"BZJH6kBNr5GGoVv9ApFrFN2lmIi","key":".appconfig.featureflag/Timestamp","label":null,"content_type":"application/vnd.microsoft.appconfig.ff+json;charset=utf-8","value":"{\"id\":
+        \"Timestamp\", \"description\": null, \"enabled\": true, \"conditions\": {\"client_filters\":
+        [{\"name\": \"Local Tests\", \"parameters\": {\"StartTime\": \"2019-01-01T00:00:00Z\",
+        \"EndTime\": \"2019-09-01T00:00:00Z\"}}, {\"name\": \"Production Tests\",
+        \"parameters\": {\"StartTime\": \"2019-09-02T00:00:00Z\", \"EndTime\": \"2019-11-01T00:00:00Z\"}}]}}","tags":{},"locked":false,"last_modified":"2020-11-12T15:04:37+00:00"}'
+    headers:
+      access-control-allow-credentials:
+      - 'true'
+      access-control-allow-origin:
+      - '*'
+      access-control-expose-headers:
+      - DNT, X-CustomHeader, Keep-Alive, User-Agent, X-Requested-With, If-Modified-Since,
+        Cache-Control, Content-Type, Authorization, x-ms-client-request-id, x-ms-useragent,
+        x-ms-content-sha256, x-ms-date, host, Accept, Accept-Datetime, Date, If-Match,
+        If-None-Match, Sync-Token, x-ms-return-client-request-id, ETag, Last-Modified,
+        Link, Memento-Datetime, retry-after-ms, x-ms-request-id, WWW-Authenticate
+      connection:
+      - keep-alive
+      content-type:
+      - application/vnd.microsoft.appconfig.kv+json; charset=utf-8
+      date:
+      - Thu, 12 Nov 2020 15:04:37 GMT
+      etag:
+      - '"BZJH6kBNr5GGoVv9ApFrFN2lmIi"'
+      last-modified:
+      - Thu, 12 Nov 2020 15:04:37 GMT
+      server:
+      - openresty/1.17.8.2
+      strict-transport-security:
+      - max-age=15724800; includeSubDomains
+      sync-token:
+      - zAJw6V16=NDo1IzI5NjM1NTE=;sn=2963551
+      transfer-encoding:
+      - chunked
+      x-ms-tenant-name:
+      - aadtestavg5ukcz
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/vnd.microsoft.appconfig.kvset+json
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - AZURECLI.APPCONFIG/2.14.0 azsdk-python-appconfiguration/1.1.1 Python/3.6.6
+        (Windows-10-10.0.19041-SP0)
+    method: GET
+    uri: https://aadtestavg5ukcz.azconfig.io/kv?label=%00&api-version=1.0&$Select=
+  response:
+    body:
+      string: '{"items":[{"etag":"RsS7CflTnsGWEfNd5hAwQWqhj0A","key":".appconfig.featureflag/Beta","label":null,"content_type":"application/vnd.microsoft.appconfig.ff+json;charset=utf-8","value":"{\"id\":
+        \"Beta\", \"description\": null, \"enabled\": false, \"conditions\": {\"client_filters\":
+        []}}","tags":{},"locked":false,"last_modified":"2020-11-12T14:34:03+00:00"},{"etag":"HDnPXA9WNfVweHJm04Mcvyp9ip7","key":".appconfig.featureflag/Percentage","label":null,"content_type":"application/vnd.microsoft.appconfig.ff+json;charset=utf-8","value":"{\"id\":
+        \"Percentage\", \"description\": null, \"enabled\": true, \"conditions\":
+        {\"client_filters\": []}}","tags":{},"locked":false,"last_modified":"2020-11-12T15:04:37+00:00"},{"etag":"BZJH6kBNr5GGoVv9ApFrFN2lmIi","key":".appconfig.featureflag/Timestamp","label":null,"content_type":"application/vnd.microsoft.appconfig.ff+json;charset=utf-8","value":"{\"id\":
+        \"Timestamp\", \"description\": null, \"enabled\": true, \"conditions\": {\"client_filters\":
+        [{\"name\": \"Local Tests\", \"parameters\": {\"StartTime\": \"2019-01-01T00:00:00Z\",
+        \"EndTime\": \"2019-09-01T00:00:00Z\"}}, {\"name\": \"Production Tests\",
+        \"parameters\": {\"StartTime\": \"2019-09-02T00:00:00Z\", \"EndTime\": \"2019-11-01T00:00:00Z\"}}]}}","tags":{},"locked":false,"last_modified":"2020-11-12T15:04:37+00:00"},{"etag":"FrXIwXRSatY1JWrTrM6sJeSE9tK","key":"Color","label":null,"content_type":null,"value":"Blue","tags":{},"locked":false,"last_modified":"2020-11-12T15:04:33+00:00"},{"etag":"AzDKuXUIDntu4woJxSDrUUqf3wr","key":"HostSecrets","label":null,"content_type":"application/vnd.microsoft.appconfig.keyvaultref+json;charset=utf-8","value":"{\"uri\":\"https://fake.vault.azure.net/secrets/fakesecret\"}","tags":{},"locked":false,"last_modified":"2020-11-12T15:04:35+00:00"},{"etag":"1IO8J8PUCrtzwPGBW3O1WSYQt26","key":"Language","label":null,"content_type":null,"value":"spanish","tags":{},"locked":false,"last_modified":"2020-11-12T15:04:36+00:00"},{"etag":"sDb8rkbBlVeUWWpIJEBO2BxLvm9","key":"font-size","label":null,"content_type":null,"value":"34","tags":{},"locked":false,"last_modified":"2020-11-12T15:04:36+00:00"}]}'
+    headers:
+      access-control-allow-credentials:
+      - 'true'
+      access-control-allow-origin:
+      - '*'
+      access-control-expose-headers:
+      - DNT, X-CustomHeader, Keep-Alive, User-Agent, X-Requested-With, If-Modified-Since,
+        Cache-Control, Content-Type, Authorization, x-ms-client-request-id, x-ms-useragent,
+        x-ms-content-sha256, x-ms-date, host, Accept, Accept-Datetime, Date, If-Match,
+        If-None-Match, Sync-Token, x-ms-return-client-request-id, ETag, Last-Modified,
+        Link, Memento-Datetime, retry-after-ms, x-ms-request-id, WWW-Authenticate
+      connection:
+      - keep-alive
+      content-type:
+      - application/vnd.microsoft.appconfig.kvset+json; charset=utf-8
+      date:
+      - Thu, 12 Nov 2020 15:04:38 GMT
+      server:
+      - openresty/1.17.8.2
+      strict-transport-security:
+      - max-age=15724800; includeSubDomains
+      sync-token:
+      - zAJw6V16=NDo1IzI5NjM1NTE=;sn=2963551
+      transfer-encoding:
+      - chunked
+      x-ms-tenant-name:
+      - aadtestavg5ukcz
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/vnd.microsoft.appconfig.kvset+json
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - AZURECLI.APPCONFIG/2.14.0 azsdk-python-appconfiguration/1.1.1 Python/3.6.6
+        (Windows-10-10.0.19041-SP0)
+    method: GET
+    uri: https://aadtestavg5ukcz.azconfig.io/kv?key=.appconfig.featureflag%2F%2A&label=%00&api-version=1.0
+  response:
+    body:
+      string: '{"items":[{"etag":"RsS7CflTnsGWEfNd5hAwQWqhj0A","key":".appconfig.featureflag/Beta","label":null,"content_type":"application/vnd.microsoft.appconfig.ff+json;charset=utf-8","value":"{\"id\":
+        \"Beta\", \"description\": null, \"enabled\": false, \"conditions\": {\"client_filters\":
+        []}}","tags":{},"locked":false,"last_modified":"2020-11-12T14:34:03+00:00"},{"etag":"HDnPXA9WNfVweHJm04Mcvyp9ip7","key":".appconfig.featureflag/Percentage","label":null,"content_type":"application/vnd.microsoft.appconfig.ff+json;charset=utf-8","value":"{\"id\":
+        \"Percentage\", \"description\": null, \"enabled\": true, \"conditions\":
+        {\"client_filters\": []}}","tags":{},"locked":false,"last_modified":"2020-11-12T15:04:37+00:00"},{"etag":"BZJH6kBNr5GGoVv9ApFrFN2lmIi","key":".appconfig.featureflag/Timestamp","label":null,"content_type":"application/vnd.microsoft.appconfig.ff+json;charset=utf-8","value":"{\"id\":
+        \"Timestamp\", \"description\": null, \"enabled\": true, \"conditions\": {\"client_filters\":
+        [{\"name\": \"Local Tests\", \"parameters\": {\"StartTime\": \"2019-01-01T00:00:00Z\",
+        \"EndTime\": \"2019-09-01T00:00:00Z\"}}, {\"name\": \"Production Tests\",
+        \"parameters\": {\"StartTime\": \"2019-09-02T00:00:00Z\", \"EndTime\": \"2019-11-01T00:00:00Z\"}}]}}","tags":{},"locked":false,"last_modified":"2020-11-12T15:04:37+00:00"}]}'
+    headers:
+      access-control-allow-credentials:
+      - 'true'
+      access-control-allow-origin:
+      - '*'
+      access-control-expose-headers:
+      - DNT, X-CustomHeader, Keep-Alive, User-Agent, X-Requested-With, If-Modified-Since,
+        Cache-Control, Content-Type, Authorization, x-ms-client-request-id, x-ms-useragent,
+        x-ms-content-sha256, x-ms-date, host, Accept, Accept-Datetime, Date, If-Match,
+        If-None-Match, Sync-Token, x-ms-return-client-request-id, ETag, Last-Modified,
+        Link, Memento-Datetime, retry-after-ms, x-ms-request-id, WWW-Authenticate
+      connection:
+      - keep-alive
+      content-type:
+      - application/vnd.microsoft.appconfig.kvset+json; charset=utf-8
+      date:
+      - Thu, 12 Nov 2020 15:04:39 GMT
+      server:
+      - openresty/1.17.8.2
+      strict-transport-security:
+      - max-age=15724800; includeSubDomains
+      sync-token:
+      - zAJw6V16=NDo1IzI5NjM1NTE=;sn=2963551
+      transfer-encoding:
+      - chunked
+      x-ms-tenant-name:
+      - aadtestavg5ukcz
+    status:
+      code: 200
+      message: OK
+version: 1
