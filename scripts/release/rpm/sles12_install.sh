@@ -1,3 +1,5 @@
+# clean up the old azure-cli and its dependencies if exist
+zypper rm -y --clean-deps azure-cli || true
 
 # Add azure-cli repo
 zypper install -y curl gcc gcc-c++ make ncurses patch wget tar zlib-devel zlib openssl-devel
