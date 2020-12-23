@@ -35,6 +35,8 @@ make install
 
 export PATH=$PATH:$WORKDIR/python_env/bin
 
+$WORKDIR/python_env/bin/python3 -m pip install --upgrade pip==20.1.1
+
 find ${WORKDIR}/src/ -name setup.py -type f | xargs -I {} dirname {} | grep -v azure-cli-testsdk | xargs pip3 install --no-deps
 pip3 install -r ${WORKDIR}/src/azure-cli/requirements.py3.$(uname).txt
 
